@@ -7,11 +7,12 @@
 
 import Foundation
 
-enum ContactStatus: CustomStringConvertible {
+enum ContactStatus: String {
     case online, away, busy, offline, callForwarding, pending
     
-    var description: String { return "" }
-    var icon: String { return "" }
+    var icon: String {
+        return "contacts_list_status_\(self)"
+    }
 }
 
 protocol ContactRepresentable {
@@ -19,4 +20,5 @@ protocol ContactRepresentable {
     var lastName: String { get }
     var imageURL: String { get }
     var status: ContactStatus { get }
+    var message: String? { get }
 }

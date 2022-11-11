@@ -39,7 +39,7 @@ extension ContactTableViewCellViewModel: ContactTableViewCellVMP {
     }
     
     var message: String {
-        return model.status.description
+        return model.message ?? ""
     }
     
     var iconImage: String {
