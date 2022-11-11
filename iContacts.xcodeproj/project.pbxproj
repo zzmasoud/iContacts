@@ -20,6 +20,7 @@
 		04B13E7D291EE60300595959 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B13E7C291EE60300595959 /* ContactsTableViewController.swift */; };
 		04B3DD92291EE81D006FB865 /* ContactRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3DD91291EE81D006FB865 /* ContactRepresentable.swift */; };
 		04B3DD99291EE9C8006FB865 /* ContactTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3DD98291EE9C8006FB865 /* ContactTableViewCellViewModel.swift */; };
+		04B3DD9D291EF61D006FB865 /* ContactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3DD9C291EF61D006FB865 /* ContactsProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		04B13E7C291EE60300595959 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		04B3DD91291EE81D006FB865 /* ContactRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepresentable.swift; sourceTree = "<group>"; };
 		04B3DD98291EE9C8006FB865 /* ContactTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		04B3DD9C291EF61D006FB865 /* ContactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,9 @@
 		04B3DD90291EE7EC006FB865 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04B3DD9E291EF668006FB865 /* Providers */,
 				04B3DD91291EE81D006FB865 /* ContactRepresentable.swift */,
+				04B3DD9C291EF61D006FB865 /* ContactsProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +162,13 @@
 				04B3DD98291EE9C8006FB865 /* ContactTableViewCellViewModel.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		04B3DD9E291EF668006FB865 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 				04B13E7D291EE60300595959 /* ContactsTableViewController.swift in Sources */,
 				04B13E5C291ED92300595959 /* AppDelegate.swift in Sources */,
 				04B13E5E291ED92300595959 /* SceneDelegate.swift in Sources */,
+				04B3DD9D291EF61D006FB865 /* ContactsProvider.swift in Sources */,
 				04B3DD92291EE81D006FB865 /* ContactRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
