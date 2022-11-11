@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ContactTableViewCellViewDelegate: AnyObject {
+    func fillUI()
+}
+
 class ContactTableViewCell: UITableViewCell {
     
     // MARK: - Statics
@@ -19,16 +23,21 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var profileImageView: UIImageView!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    // MARK: - Properties
+    
+    var viewModel: ContactTableViewCellVMP! {
+        didSet {
+            viewModel.setView(self)
+        }
+    }
+}
+
+extension ContactTableViewCell: ContactTableViewCellViewDelegate {
+    func fillUI() {
+        titleLabel.text = viewModel.name
+        subtitleLabel.text = viewModel.message
+        statusImageView.image = UIImage(named: viewModel.iconImage)
+        profileImageView.image = UIImage(named: viewModel.profileImage)
+    }
 }
