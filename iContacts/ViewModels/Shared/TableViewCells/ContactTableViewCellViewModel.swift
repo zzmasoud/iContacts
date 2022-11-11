@@ -18,7 +18,11 @@ protocol ContactTableViewCellVMP {
 class ContactTableViewCellViewModel {
     
     private let model: ContactRepresentable
-    private weak var view: ContactTableViewCellViewDelegate?
+    private weak var view: ContactTableViewCellViewDelegate? {
+        didSet {
+            view?.fillUI()
+        }
+    }
     
     init(model: ContactRepresentable) {
         self.model = model
