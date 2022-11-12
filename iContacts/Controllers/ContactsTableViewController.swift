@@ -9,6 +9,7 @@ import UIKit
 
 protocol ContactsTableViewControllerVD: AnyObject {
     func fillUI()
+    func showError(message: String)
 }
 
 class ContactsTableViewController: UITableViewController {
@@ -51,5 +52,11 @@ class ContactsTableViewController: UITableViewController {
 extension ContactsTableViewController: ContactsTableViewControllerVD {
     func fillUI() {
         tableView.reloadData()
+    }
+    
+    func showError(message: String) {
+        let alert = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel))
+        self.present(alert, animated: true)
     }
 }

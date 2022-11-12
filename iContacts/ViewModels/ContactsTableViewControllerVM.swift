@@ -45,7 +45,7 @@ class ContactsTableViewControllerVM {
             case .success(let groups):
                 self.groups = groups
             case .failure(let error):
-                break
+                self.view?.showError(message: error.localizedDescription)
             }
         }
     }
