@@ -24,6 +24,7 @@
 		04B3DDA0291EF6BE006FB865 /* LocalContactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3DD9F291EF6BE006FB865 /* LocalContactsProvider.swift */; };
 		04B3DDA2291EFA22006FB865 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3DDA1291EFA22006FB865 /* Group.swift */; };
 		04B3DDA7291F012C006FB865 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B3DDA6291F012C006FB865 /* contacts.json */; };
+		04E7B4A9291F905E001EB3AB /* ContactsTableViewControllerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7B4A8291F905E001EB3AB /* ContactsTableViewControllerVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		04B3DD9F291EF6BE006FB865 /* LocalContactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalContactsProvider.swift; sourceTree = "<group>"; };
 		04B3DDA1291EFA22006FB865 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		04B3DDA6291F012C006FB865 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
+		04E7B4A8291F905E001EB3AB /* ContactsTableViewControllerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewControllerVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				04B3DD96291EE9AC006FB865 /* Shared */,
+				04E7B4A8291F905E001EB3AB /* ContactsTableViewControllerVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				04B13E7A291EE0AA00595959 /* ContactTableViewCell.swift in Sources */,
 				04B3DDA0291EF6BE006FB865 /* LocalContactsProvider.swift in Sources */,
 				04B3DDA2291EFA22006FB865 /* Group.swift in Sources */,
+				04E7B4A9291F905E001EB3AB /* ContactsTableViewControllerVM.swift in Sources */,
 				04B13E60291ED92300595959 /* FirstViewController.swift in Sources */,
 				04B13E7D291EE60300595959 /* ContactsTableViewController.swift in Sources */,
 				04B13E5C291ED92300595959 /* AppDelegate.swift in Sources */,
