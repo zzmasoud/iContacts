@@ -7,12 +7,11 @@
 
 import Foundation
 
-enum ContactsProviderResult<Error: Swift.Error> {
+enum ContactsProviderResult {
     case success([Group])
     case failure(Error)
 }
 
 protocol ContactsProvider {
-    associatedtype Error: Swift.Error
-    func load(completion: @escaping (ContactsProviderResult<Error>)->Void)
+    func load(completion: @escaping (ContactsProviderResult)->Void)
 }

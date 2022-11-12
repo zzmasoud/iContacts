@@ -22,7 +22,6 @@ final class LocalContactsProvider {
     
     enum Error: Swift.Error {
         case fileNotFound
-        case decoder(error: Swift.Error)
     }
     
     static private let jsonFileName = "contacts"
@@ -40,16 +39,16 @@ extension LocalContactsProvider: ContactsProvider {
         let groups: [Group]
     }
     
-    func load(completion: @escaping (ContactsProviderResult<Error>) -> Void) {
+    func load(completion: @escaping (ContactsProviderResult) -> Void) {
         guard let jsonData = broswer.load(fileName: Self.jsonFileName, type: "json") else {
-            return completion(.failure(.fileNotFound))
+            return completion(.failure(Error.fileNotFound))
         }
         
         do {
             let json = try JSONDecoder().decode(JSONSchema.self, from: jsonData)
             completion(.success(json.groups))
         } catch {
-            completion(.failure(.decoder(error: error)))
+            completion(.failure(error))
         }
     }
 }

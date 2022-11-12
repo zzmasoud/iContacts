@@ -30,6 +30,10 @@ class ContactsTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.title(forSection: section)
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows(inSection: section)
