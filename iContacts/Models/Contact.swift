@@ -9,6 +9,8 @@ import Foundation
 
 struct Contact: Decodable {
     
+    // MARK: - Enums
+    
     enum ContactStatus: String, Decodable {
         case online, away, busy, offline, callforwarding, pending
         
@@ -29,12 +31,16 @@ struct Contact: Decodable {
             return "contacts_list_avatar_\(self)"
         }
     }
+    
+    // MARK: - Properties
 
     var firstName: String
     var lastName: String
     var gender: Gender?
     var status: ContactStatus
     var message: String?
+    
+    // MARK: - JSON keys
     
     enum CodingKeys: String, CodingKey {
         case status = "statusIcon"
