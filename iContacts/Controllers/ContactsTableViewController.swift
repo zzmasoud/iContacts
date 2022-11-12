@@ -40,9 +40,7 @@ class ContactsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ContactTableViewCell.id, for: indexPath) as? ContactTableViewCell else { fatalError("expected to be ContactTableViewCell") }
-        
         cell.viewModel = viewModel.viewModelForCell(atSection: indexPath.section, index: indexPath.row)
-        
         return cell
     }
 }

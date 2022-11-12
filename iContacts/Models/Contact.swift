@@ -34,11 +34,11 @@ struct Contact: Decodable {
     
     // MARK: - Properties
 
-    var firstName: String
-    var lastName: String
-    var gender: Gender?
-    var status: ContactStatus
-    var message: String?
+    let firstName: String
+    let lastName: String
+    let gender: Gender?
+    let status: ContactStatus
+    let message: String?
     
     // MARK: - JSON keys
     
