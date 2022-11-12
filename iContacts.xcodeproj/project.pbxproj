@@ -80,15 +80,13 @@
 		04B13E5A291ED92300595959 /* iContacts */ = {
 			isa = PBXGroup;
 			children = (
+				04B13E5B291ED92300595959 /* AppDelegate.swift */,
+				04B13E5D291ED92300595959 /* SceneDelegate.swift */,
 				04B3DD95291EE9A5006FB865 /* ViewModels */,
 				04B3DD90291EE7EC006FB865 /* Models */,
 				04B13E75291EDFA500595959 /* Controllers */,
 				04B13E73291EDF4500595959 /* Views */,
-				04B13E5B291ED92300595959 /* AppDelegate.swift */,
-				04B13E5D291ED92300595959 /* SceneDelegate.swift */,
-				04B13E64291ED92500595959 /* Assets.xcassets */,
-				04B13E66291ED92500595959 /* LaunchScreen.storyboard */,
-				04B3DDA6291F012C006FB865 /* contacts.json */,
+				04E7B4AA291FA454001EB3AB /* Resources */,
 				04B13E69291ED92500595959 /* Info.plist */,
 			);
 			path = iContacts;
@@ -106,6 +104,7 @@
 		04B13E74291EDF4900595959 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				04B13E66291ED92500595959 /* LaunchScreen.storyboard */,
 				04B13E61291ED92300595959 /* Main.storyboard */,
 				04B13E71291EDBF000595959 /* First.storyboard */,
 				04B13E6F291EDBE800595959 /* Second.storyboard */,
@@ -181,6 +180,15 @@
 				04B3DD9F291EF6BE006FB865 /* LocalContactsProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		04E7B4AA291FA454001EB3AB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04B13E64291ED92500595959 /* Assets.xcassets */,
+				04B3DDA6291F012C006FB865 /* contacts.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
