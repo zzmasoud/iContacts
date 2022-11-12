@@ -14,16 +14,14 @@ protocol ContactsTableViewControllerVD: AnyObject {
 
 class ContactsTableViewController: UITableViewController {
 
-    var viewModel: ContactsTableViewControllerVMP! {
-        didSet {
-            viewModel.setView(self)
-        }
-    }
+    var viewModel: ContactsTableViewControllerVMP!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: ContactTableViewCell.id, bundle: nil), forCellReuseIdentifier: ContactTableViewCell.id)
+        
+        viewModel.setView(self)
     }
 
     // MARK: - Table view data source
