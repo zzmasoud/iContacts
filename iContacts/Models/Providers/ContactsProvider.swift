@@ -8,7 +8,7 @@
 import Foundation
 
 enum ContactsProviderResult<Error: Swift.Error> {
-    case success([ContactRepresentable])
+    case success([Group])
     case failure(Error)
 }
 

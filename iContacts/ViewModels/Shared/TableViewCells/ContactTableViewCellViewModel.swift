@@ -17,14 +17,14 @@ protocol ContactTableViewCellVMP {
 
 class ContactTableViewCellViewModel {
     
-    private let model: ContactRepresentable
+    private let model: Contact
     private weak var view: ContactTableViewCellViewDelegate? {
         didSet {
             view?.fillUI()
         }
     }
     
-    init(model: ContactRepresentable) {
+    init(model: Contact) {
         self.model = model
     }
     
@@ -47,6 +47,6 @@ extension ContactTableViewCellViewModel: ContactTableViewCellVMP {
     }
     
     var profileImage: String {
-        return model.imageURL
+        return model.gender?.image ?? Contact.Gender.unknown.image
     }
 }
