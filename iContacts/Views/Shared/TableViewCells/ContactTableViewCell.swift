@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ContactTableViewCellViewDelegate: AnyObject {
+protocol ContactTableViewCellVD: AnyObject {
     func fillUI()
 }
 
@@ -33,7 +33,7 @@ class ContactTableViewCell: UITableViewCell {
     }
 }
 
-extension ContactTableViewCell: ContactTableViewCellViewDelegate {
+extension ContactTableViewCell: ContactTableViewCellVD {
     func fillUI() {
         titleLabel.text = viewModel.name
         subtitleLabel.text = viewModel.message
