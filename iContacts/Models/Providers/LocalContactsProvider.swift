@@ -23,13 +23,13 @@ final class LocalContactsProvider {
     enum Error: Swift.Error {
         case fileNotFound
     }
-    
-    static private let jsonFileName = "contacts"
-    
+        
     private let broswer: FileBrowser
+    private let fileName: String
     
-    init(browser: FileBrowser) {
+    init(browser: FileBrowser, fileName: String) {
         self.broswer = browser
+        self.fileName = fileName
     }
 }
 
@@ -40,7 +40,7 @@ extension LocalContactsProvider: ContactsProvider {
     }
     
     func load(completion: @escaping (ContactsProviderResult) -> Void) {
-        guard let jsonData = broswer.load(fileName: Self.jsonFileName, type: "json") else {
+        guard let jsonData = broswer.load(fileName: fileName, type: "json") else {
             return completion(.failure(Error.fileNotFound))
         }
         
