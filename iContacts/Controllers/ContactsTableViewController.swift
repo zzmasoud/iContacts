@@ -14,13 +14,15 @@ protocol ContactsTableViewControllerVD: AnyObject {
 
 class ContactsTableViewController: UITableViewController {
 
+    private lazy var searchController: UISearchController = UISearchController(searchResultsController: nil)
     var viewModel: ContactsTableViewControllerVMP!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: ContactTableViewCell.id, bundle: nil), forCellReuseIdentifier: ContactTableViewCell.id)
-        
+        tableView.tableHeaderView = searchController.searchBar
+
         viewModel.setView(self)
     }
 
