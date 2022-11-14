@@ -47,7 +47,9 @@ class ContactsTableViewController: UITableViewController {
 
 extension ContactsTableViewController: ContactsTableViewControllerVD {
     func fillUI() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func showError(message: String) {
