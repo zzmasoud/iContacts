@@ -57,6 +57,8 @@ extension ContactsTableViewController: ContactsTableViewControllerVD {
     func showError(message: String) {
         let alert = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel))
-        self.present(alert, animated: true)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
     }
 }
